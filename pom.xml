@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>HelloWorld</groupId>
     <artifactId>helloworld</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Hello World Packaged as an RPM</name>
@@ -33,6 +33,7 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+<!--
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>rpm-maven-plugin</artifactId>
@@ -49,7 +50,6 @@
                     <copyright>2013</copyright>
                     <distribution>2013</distribution>
                     <group>Continuous Delivery</group>
-                    <!--icon>src/main/resources/icon.gif</icon-->
                     <packager>TEST</packager>
                     <prefix>/usr/local</prefix>
                     <changelogFile>src/changelog</changelogFile>
@@ -152,6 +152,7 @@
                     </preremoveScriptlet>
                 </configuration>
             </plugin>
+-->
         </plugins>
     </build>
 </project>
