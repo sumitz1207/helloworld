@@ -6,13 +6,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Hello World Packaged as an RPM</name>
-    <description>This is an example of packaging a java application as an RPM.</description>
-
-    <organization>
-        <name>Standard Chartered Bank</name>
-        <url>http://www.standardchartered.com</url>
-    </organization>
+    <name>HelloWorld</name>
 
     <dependencies>
 		<dependency>
