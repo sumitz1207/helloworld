@@ -26,6 +26,14 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>rpm-maven-plugin</artifactId>
                 <version>2.1-alpha-3</version>
@@ -39,10 +47,10 @@
                 </executions>
                 <configuration>
                     <copyright>2013</copyright>
-                    <distribution>SCB 2013</distribution>
-                    <group>FMSD Continuous Delivery</group>
+                    <distribution>2013</distribution>
+                    <group>Continuous Delivery</group>
                     <!--icon>src/main/resources/icon.gif</icon-->
-                    <packager>SCB</packager>
+                    <packager>TEST</packager>
                     <prefix>/usr/local</prefix>
                     <changelogFile>src/changelog</changelogFile>
                     <defineStatements>
@@ -52,8 +60,8 @@
                         <mapping>
                             <directory>/usr/local/bin/helloworld</directory>
                             <filemode>440</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <sources>
                                 <source>
                                     <location>target/classes</location>
@@ -64,8 +72,8 @@
                             <directory>/usr/local/doc/helloworld</directory>
                             <documentation>true</documentation>
                             <filemode>444</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <sources>
                                 <source>
                                     <location>target/site</location>
@@ -75,8 +83,8 @@
                         <mapping>
                             <directory>/usr/local/lib</directory>
                             <filemode>750</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <dependency>
                                 <includes>
                                     <include>jmock:jmock</include>
@@ -89,8 +97,8 @@
                         <mapping>
                             <directory>/usr/local/bin</directory>
                             <filemode>750</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <sources>
                                 <source>
                                     <location>src/main/bin</location>
@@ -104,8 +112,8 @@
                         <mapping>
                             <directory>/usr/local/oldbin</directory>
                             <filemode>750</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <sources>
                                 <softlinkSource>
                                     <location>/usr/local/bin</location>
@@ -116,8 +124,8 @@
                             <directory>/usr/local/conf/helloworld</directory>
                             <configuration>true</configuration>
                             <filemode>640</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                             <sources>
                                 <source>
                                     <location>src/main/conf</location>
@@ -127,8 +135,8 @@
                         <mapping>
                             <directory>/usr/local/log/helloworld</directory>
                             <filemode>750</filemode>
-                            <username>scbadmin</username>
-                            <groupname>scbgroup</groupname>
+                            <username>admin</username>
+                            <groupname>group</groupname>
                         </mapping>
                     </mappings>
                     <preinstallScriptlet>
